@@ -1,6 +1,8 @@
-#Read in data (need a folder called "Data" in the wd)
+#Download the file
 download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",destfile = "./powerData.zip")
 unzip("./powerData.zip")
+
+#Read in data
 pData<-read.table("./household_power_consumption.txt",header = TRUE,sep=";",stringsAsFactors = FALSE)
 head(pData)
 str(pData)
